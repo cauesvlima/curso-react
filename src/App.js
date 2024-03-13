@@ -6,14 +6,13 @@ import Pessoa from './components/Pessoa';
 import List from './components/List'; 
 import Evento from './components/Evento'; 
 import Form from './components/Form'; 
+import Condicional from './components/Condicional';
 function App() {
   return (
     <div className="App">
-      <h1>Testando evento</h1>
-      <Form/>
-      <br/>
-      <Evento/>
-          </div>
+      <h1>Rendenizando condicional</h1>
+      <Condicional />
+    </div>
   );
 }
 
