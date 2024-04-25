@@ -7,11 +7,12 @@ import List from './components/List';
 import Evento from './components/Evento'; 
 import Form from './components/Form'; 
 import Condicional from './components/Condicional';
+import Lista from './components/lista'; 
 function App() {
+
   return (
     <div className="App">
-      <h1>Rendenizando condicional</h1>
-      <Condicional />
+      <Lista />
     </div>
   );
 }
