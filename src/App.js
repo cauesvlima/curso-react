@@ -1,25 +1,28 @@
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import Empresa from './pages/Empresa';
+import Contato from './pages/Contato';
 
-import './App.css';
-import HelloWord from './components/HelloWord'; 
-import SayMyName from './components/SayMyName'; 
-import Pessoa from './components/Pessoa'; 
-import List from './components/List'; 
-import Evento from './components/Evento'; 
-import Form from './components/Form'; 
-import Condicional from './components/Condicional';
-import Lista from './components/lista'; 
-import SeuNome from './components/SeuNome'; 
-import Saudacao from './components/Saudacao'; 
-import {useState} from 'react'
 function App() {
-  const [nome, setNome] = useState()
-
   return (
-    <div className="App">
-      <h1>StateLift</h1>
-      <SeuNome setNome={setNome}/>
-      <Saudacao nome = {nome}/>
-    </div>
+    <Router>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/empresa">Empresa</Link>
+        </li>
+        <li>
+          <Link to="/contato">Contato</Link>
+        </li>
+      </ul>
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/empresa' element={<Empresa />} />
+        <Route path='/contato' element={<Contato />} />
+      </Routes>
+    </Router>
   );
 }
 
